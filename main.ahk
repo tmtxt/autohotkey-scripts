@@ -14,3 +14,12 @@ return
 !l::
 Send {right}
 return
+
+; Ctrl+M/Alt+M to Enter
+^m::
+Send {Enter}
+return
+
+!m::
+Send {Enter}
+return
