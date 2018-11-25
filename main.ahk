@@ -36,3 +36,12 @@ return
 !v::
 Send ^v
 return
+
+; Alt+F to Backspace, Alt+Shift+F to Ctrl+Backspace (delete 1 word)
+!f::
+Send {Backspace}
+return
+
+!+f::
+Send ^{Backspace}
+return
