@@ -45,3 +45,12 @@ return
 !+f::
 Send ^{Backspace}
 return
+
+; Alt+D to Delete, Alt+Shift+D to Ctrl+Delete (forward delete 1 word)
+!d::
+Send {Delete}
+return
+
+!+d::
+Send ^{Delete}
+return
