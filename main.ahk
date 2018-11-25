@@ -1,0 +1,3 @@
+!i::
+Send {up}
+return
