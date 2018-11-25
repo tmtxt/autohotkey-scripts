@@ -54,3 +54,21 @@ return
 !+d::
 Send ^{Delete}
 return
+
+; Alt+U/O to Ctrl+Left/Right (Previous/Next word)
+!u::
+Send ^{left}
+return
+
+!o::
+Send ^{right}
+return
+
+; Ctr+/ and Alt+Z to Ctrl+Z (Undo)
+^/::
+Send ^z
+return
+
+!z::
+Send ^z
+return
