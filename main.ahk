@@ -1,4 +1,4 @@
-; Alt I/K/J/L to Up/Down/Left/Right
+; Alt+I/K/J/L to Up/Down/Left/Right
 !i::
 Send {up}
 return
@@ -22,4 +22,17 @@ return
 
 !m::
 Send {Enter}
+return
+
+; Alt+X/C/V to Ctrl+X/C/V
+!x::
+Send ^x
+return
+
+!c::
+Send ^c
+return
+
+!v::
+Send ^v
 return
