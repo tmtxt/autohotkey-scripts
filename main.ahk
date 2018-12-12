@@ -15,6 +15,32 @@ return
 Send {right}
 return
 
+; Alt+Shift+I/K/J/L to PageUp/PageDown/Home/End
+!+i::
+Send {PgUp}
+return
+
+!+k::
+Send {PgDn}
+return
+
+!+j::
+Send {Home}
+return
+
+!+l::
+Send {End}
+return
+
+; Alt+N/Alt+Shift+N to Shift+Home/Shift+End
+!n::
+Send ^{Home}
+return
+
+!+n::
+Send ^{End}
+return
+
 ; Ctrl+M/Alt+M to Enter
 ^m::
 Send {Enter}
