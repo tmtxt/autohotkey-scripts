@@ -1,34 +1,48 @@
+LAlt up::
+If (A_PriorKey = "LAlt") ;  If LAlt was pressed alone
+    return ; do nothing
+return
+
+; ; In this case its necessary to define a custom combination by using "LAlt &" or "<!" 
+; ; to avoid that LAlt loses its original function as a modifier key:
+
+; <!F4:: Send {Alt Down}{F4}{Alt Up} ; <! means LAlt
+
+<!Space::
+Send {Alt Down}{/}{Alt Up}
+return
+
 ; Alt+I/K/J/L to Up/Down/Left/Right
-!i::
+<!i::
 Send {up}
 return
 
-!k::
+<!k::
 Send {down}
 return
 
-!j::
+<!j::
 Send {left}
 return
 
-!l::
+<!l::
 Send {right}
 return
 
 ; Alt+Shift+I/K/J/L to PageUp/PageDown/Home/End
-!+i::
+<!+i::
 Send {PgUp}
 return
 
-!+k::
+<!+k::
 Send {PgDn}
 return
 
-!+j::
+<!+j::
 Send {Home}
 return
 
-!+l::
+<!+l::
 Send {End}
 return
 
@@ -51,9 +65,9 @@ Send {Enter}
 return
 
 ; Alt+X/C/V to Ctrl+X/C/V
-!x::
-Send ^x
-return
+; !x::
+; Send ^x
+; return
 
 !c::
 Send ^c
