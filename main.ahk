@@ -3,6 +3,8 @@ If (A_PriorKey = "LAlt") ;  If LAlt was pressed alone
     return ; do nothing
 return
 
+CapsLock::Ctrl
+
 ; ; In this case its necessary to define a custom combination by using "LAlt &" or "<!" 
 ; ; to avoid that LAlt loses its original function as a modifier key:
 
