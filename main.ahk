@@ -1,3 +1,5 @@
+; --------------------
+; Disable Left Alt button on Windows
 LAlt up::
 If (A_PriorKey = "LAlt") ;  If LAlt was pressed alone
     return ; do nothing
@@ -13,6 +15,9 @@ CapsLock::Ctrl
 <!Space::
 Send {Alt Down}{/}{Alt Up}
 return
+
+; --------------------
+; Ergonomic key mapping
 
 ; Alt+I/K/J/L to Up/Down/Left/Right
 <!i::
@@ -66,17 +71,21 @@ return
 Send {Enter}
 return
 
-; Alt+X/C/V to Ctrl+X/C/V
-; !x::
-; Send ^x
-; return
-
+; Map some Ctrl + Key to Alt + Key
 !c::
 Send ^c
 return
 
 !v::
 Send ^v
+return
+
+!a::
+Send ^a
+return
+
+!s::
+Send ^s
 return
 
 ; Alt+F to Backspace, Alt+Shift+F to Ctrl+Backspace (delete 1 word)
@@ -113,4 +122,12 @@ return
 
 !z::
 Send ^z
+return
+
+; --------------------
+; Mac style:
+
+; Quit app
+<#q::
+Send !{F4}
 return
