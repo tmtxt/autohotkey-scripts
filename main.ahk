@@ -132,10 +132,31 @@ return
 Send !{F4}
 return
 
+; --------------------
+; Fast application switching
 
-F1::  ; Ctrl+Alt+N
+; F1: Browser
+F1::
 if WinExist("ahk_exe firefox.exe")
     WinActivate
 else
     Run firefox.exe
+return
+
+; F2: Emacs
+F2::
+if WinExist("ahk_class Emacs")
+    WinActivate
+else
+    Run runemacs.exe
+return
+
+; F3
+
+; F4: Discord
+F4::
+if WinExist("ahk_exe Discord.exe")
+    WinActivate
+else
+    Run, "C:\Users\me\AppData\Local\Discord\Update.exe" "--processStart" "Discord.exe"
 return
