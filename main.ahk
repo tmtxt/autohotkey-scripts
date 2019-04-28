@@ -134,7 +134,6 @@ return
 
 ; --------------------
 ; Fast application switching
-
 ; F1: Browser
 F1::
 if WinExist("ahk_exe firefox.exe")
@@ -142,7 +141,6 @@ if WinExist("ahk_exe firefox.exe")
 else
     Run firefox.exe
 return
-
 ; F2: Emacs
 F2::
 if WinExist("ahk_class Emacs")
@@ -150,9 +148,7 @@ if WinExist("ahk_class Emacs")
 else
     Run runemacs.exe
 return
-
 ; F3
-
 ; F4: Discord
 F4::
 if WinExist("ahk_exe Discord.exe")
@@ -160,3 +156,30 @@ if WinExist("ahk_exe Discord.exe")
 else
     Run, "C:\Users\me\AppData\Local\Discord\Update.exe" "--processStart" "Discord.exe"
 return
+; F5
+; F6
+F6::
+if WinExist("ahk_class iTunes")
+    WinActivate
+else
+    Run, iTunes.exe
+return
+; F7: Secondary browser
+; F8: Messenger
+; F9
+; F10: Slack
+F10::
+if WinExist("ahk_exe slack.exe")
+    WinActivate
+else
+    Run, "C:\Users\me\AppData\Local\slack\slack.exe"
+return
+
+; --------------------
+; Firefox keys
+; Win+T to Ctrl+T
+#IfWinActive, ahk_exe firefox.exe
+#t::^t ; Win+T to Ctrl+T
+#w::^w ; Win+W to Ctrl+W
+#+t::^+t ; Win+Shift+T to Ctrl+Shift+T
+#IfWinActive
