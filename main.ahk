@@ -131,3 +131,11 @@ return
 <#q::
 Send !{F4}
 return
+
+
+F1::  ; Ctrl+Alt+N
+if WinExist("ahk_exe firefox.exe")
+    WinActivate
+else
+    Run firefox.exe
+return
