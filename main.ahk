@@ -177,9 +177,34 @@ return
 
 ; --------------------
 ; Firefox keys
-; Win+T to Ctrl+T
 #IfWinActive, ahk_exe firefox.exe
 #t::^t ; Win+T to Ctrl+T
 #w::^w ; Win+W to Ctrl+W
 #+t::^+t ; Win+Shift+T to Ctrl+Shift+T
+; Win+Num to Ctrl+Num
+#1::^1
+#2::^2
+#3::^3
+#4::^4
+#5::^5
+#6::^6
+#7::^7
+#8::^8
+#9::^9
+#IfWinActive
+
+; --------------------
+; Discord keys
+#IfWinActive, ahk_exe Discord.exe
+#k::
+Send ^k
+return
+#IfWinActive
+
+; --------------------
+; Slack keys
+#IfWinActive, ahk_exe slack.exe
+#k::
+Send ^k
+return
 #IfWinActive
