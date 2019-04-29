@@ -199,6 +199,22 @@ return
 #k::
 Send ^k
 return
+; Win+Num to Ctrl+Num
+#1::
+Send ^1
+return
+#2::
+Send ^2
+return
+#3::
+Send ^3
+return
+#4::
+Send ^4
+return
+#5::
+Send ^5
+return
 #IfWinActive
 
 ; --------------------
@@ -206,5 +222,13 @@ return
 #IfWinActive, ahk_exe slack.exe
 #k::
 Send ^k
+return
+#IfWinActive
+
+; --------------------
+; iTunes keys
+#IfWinActive, ahk_class iTunes
+#f::
+Send ^f
 return
 #IfWinActive
