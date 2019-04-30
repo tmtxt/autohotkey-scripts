@@ -8,14 +8,14 @@ return
 ; Map CapsLock -> Ctrl (Emacs favorite style)
 CapsLock::Ctrl
 
-; ; In this case its necessary to define a custom combination by using "LAlt &" or "<!" 
+; ; In this case its necessary to define a custom combination by using "LAlt &" or "<!"
 ; ; to avoid that LAlt loses its original function as a modifier key:
 
 ; <!F4:: Send {Alt Down}{F4}{Alt Up} ; <! means LAlt
 
-<!Space::
-Send {Alt Down}{/}{Alt Up}
-return
+; <!Space::
+; Send {Alt Down}{/}{Alt Up}
+; return
 
 ; --------------------
 ; Ergonomic key mapping
@@ -126,6 +126,12 @@ return
 
 !z::
 Send ^z
+return
+
+; Ctrl+K to delete line to end
+^k::
+Send +{End}
+Send {Delete}
 return
 
 #IfWinNotActive
