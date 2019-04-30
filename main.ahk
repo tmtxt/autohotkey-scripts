@@ -5,6 +5,7 @@ If (A_PriorKey = "LAlt") ;  If LAlt was pressed alone
     return ; do nothing
 return
 
+; Map CapsLock -> Ctrl (Emacs favorite style)
 CapsLock::Ctrl
 
 ; ; In this case its necessary to define a custom combination by using "LAlt &" or "<!" 
@@ -18,6 +19,9 @@ return
 
 ; --------------------
 ; Ergonomic key mapping
+
+; Not applicable for Emacs. Emacs has its own key binding mechanism
+#IfWinNotActive, ahk_class Emacs
 
 ; Alt+I/K/J/L to Up/Down/Left/Right
 <!i::
@@ -71,7 +75,7 @@ return
 Send {Enter}
 return
 
-; Map some Ctrl + Key to Alt + Key
+; Map some Alt- Key to Ctrl- Key
 !c::
 Send ^c
 return
@@ -123,6 +127,8 @@ return
 !z::
 Send ^z
 return
+
+#IfWinNotActive
 
 ; --------------------
 ; Mac style:
