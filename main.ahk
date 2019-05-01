@@ -178,6 +178,13 @@ else
 return
 ; F7: Secondary browser
 ; F8: Messenger
+F8::
+if WinExist("Messenger")
+  WinActivate
+else
+  ; NOTE: Change this depending on the machine
+  Run, "C:\Program Files (x86)\Google\Chrome\Application\chrome_proxy.exe" "--profile-directory=Default" "--app-id=necdkaglbmnhgapjfamakhengnbknpdn"
+return
 ; F9
 ; F10: Slack
 F10::
