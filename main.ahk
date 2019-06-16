@@ -161,6 +161,12 @@ else
     Run runemacs.exe
 return
 ; F3
+F3::
+if WinExist("ahk_exe rider64.exe")
+    WinActivate
+else
+    Run, "C:\Program Files\JetBrains\JetBrains Rider 2019.1.2\bin\rider64.exe"
+return
 ; F4: Discord
 F4::
 if WinExist("ahk_exe Discord.exe")
