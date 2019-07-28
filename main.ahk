@@ -17,6 +17,18 @@ CapsLock::Ctrl
 ; Send {Alt Down}{/}{Alt Up}
 ; return
 
+#IfWinActive, ahk_exe rider64.exe
+
+!s::
+Send !s
+return
+
+!c::
+Send !c
+return
+
+#IfWinActive
+
 ; --------------------
 ; Ergonomic key mapping
 
@@ -216,6 +228,9 @@ return
 #7::^7
 #8::^8
 #9::^9
+^+p::
+Send ^l
+return
 #IfWinActive
 
 ; --------------------
