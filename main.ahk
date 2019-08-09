@@ -187,6 +187,12 @@ else
     Run, "C:\Users\me\AppData\Local\Discord\Update.exe" "--processStart" "Discord.exe"
 return
 ; F5
+F5::
+if WinExist("ahk_exe powershell.exe")
+    WinActivate
+else
+    Run, "C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe"
+return
 ; F6
 F6::
 if WinExist("ahk_class iTunes")
@@ -206,10 +212,10 @@ return
 ; F9
 ; F10: Slack
 F10::
-if WinExist("ahk_exe slack.exe")
+if WinExist("ahk_exe Slack.exe")
     WinActivate
 else
-    Run, "C:\Users\me\AppData\Local\slack\slack.exe"
+    Run, "C:\Program Files\Slack\Slack.exe"
 return
 
 ; --------------------
