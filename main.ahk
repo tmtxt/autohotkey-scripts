@@ -177,7 +177,7 @@ F3::
 if WinExist("ahk_exe rider64.exe")
     WinActivate
 else
-    Run, "C:\Program Files\JetBrains\JetBrains Rider 2019.1.2\bin\rider64.exe"
+    Run, "C:\Program Files (x86)\JetBrains\JetBrains Rider 2019.1.3\bin\rider64.exe"
 return
 ; F4: Discord
 F4::
@@ -237,6 +237,10 @@ return
 ^+p::
 Send ^l
 return
+
+; Firefox on Windows defaults Ctrl+Shift+Q to quit but I don't want that. Simply redirect this key
+; binding to another key binding and then set that key binding in the Firefox plugin
+^+q::^+y
 #IfWinActive
 
 ; --------------------
