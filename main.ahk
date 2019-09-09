@@ -17,6 +17,8 @@ CapsLock::Ctrl
 ; Send {Alt Down}{/}{Alt Up}
 ; return
 
+; ^!Up:: Winset, Alwaysontop, Toggle, A
+
 #IfWinActive, ahk_exe rider64.exe
 
 !s::
@@ -156,6 +158,12 @@ return
 Send !{F4}
 return
 
+#`::    ; Next window
+WinGetClass, ActiveClass, A
+WinSet, Bottom,, A
+WinActivate, ahk_class %ActiveClass%
+return
+
 ; --------------------
 ; Fast application switching
 ; F1: Browser
@@ -170,7 +178,7 @@ F2::
 if WinExist("ahk_class Emacs")
     WinActivate
 else
-    Run runemacs.exe
+    Run, "C:\Program Files\emacs-25\bin\runemacs.exe"
 return
 ; F3
 F3::
@@ -280,5 +288,13 @@ return
 #IfWinActive, ahk_class iTunes
 #f::
 Send ^f
+return
+
+^+i::
+Send ^{up}
+return
+
+^+k::
+Send ^{down}
 return
 #IfWinActive
