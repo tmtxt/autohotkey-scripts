@@ -196,10 +196,8 @@ else
 return
 ; F5
 F5::
-if WinExist("ahk_exe powershell.exe")
+if WinExist("ahk_exe WindowsTerminal.exe")
     WinActivate
-else
-    Run, "C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe"
 return
 ; F6
 F6::
@@ -209,14 +207,20 @@ else
     Run, iTunes.exe
 return
 ; F7: Secondary browser
-; F8: Messenger
-F8::
-if WinExist("Messenger")
-  WinActivate
+F7::
+if WinExist("ahk_exe chrome.exe")
+    WinActivate
 else
-  ; NOTE: Change this depending on the machine
-  Run, "C:\Program Files (x86)\Google\Chrome\Application\chrome_proxy.exe" "--profile-directory=Default" "--app-id=necdkaglbmnhgapjfamakhengnbknpdn"
+    Run chrome.exe
 return
+; F8: Messenger
+; F8::
+; if WinExist("Messenger")
+;   WinActivate
+; else
+;   ; NOTE: Change this depending on the machine
+;   Run, "C:\Program Files (x86)\Google\Chrome\Application\chrome_proxy.exe" "--profile-directory=Default" "--app-id=necdkaglbmnhgapjfamakhengnbknpdn"
+; return
 ; F9
 ; F10: Slack
 F10::
@@ -224,6 +228,12 @@ if WinExist("ahk_exe Slack.exe")
     WinActivate
 else
     Run, "C:\Program Files\Slack\Slack.exe"
+    return
+; F11
+; F12
+F12::
+if WinExist("ahk_exe Postman.exe")
+    WinActivate
 return
 
 ; --------------------
