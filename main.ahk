@@ -170,29 +170,21 @@ return
 F1::
 if WinExist("ahk_exe firefox.exe")
     WinActivate
-else
-    Run firefox.exe
 return
 ; F2: Emacs
 F2::
 if WinExist("ahk_class Emacs")
     WinActivate
-else
-    Run, "C:\Program Files\emacs-25\bin\runemacs.exe"
 return
 ; F3
 F3::
 if WinExist("ahk_exe rider64.exe")
     WinActivate
-else
-    Run, "C:\Program Files (x86)\JetBrains\JetBrains Rider 2019.1.3\bin\rider64.exe"
 return
 ; F4: Discord
 F4::
 if WinExist("ahk_exe Discord.exe")
     WinActivate
-else
-    Run, "C:\Users\me\AppData\Local\Discord\Update.exe" "--processStart" "Discord.exe"
 return
 ; F5
 F5::
@@ -203,15 +195,11 @@ return
 F6::
 if WinExist("ahk_class iTunes")
     WinActivate
-else
-    Run, iTunes.exe
 return
 ; F7: Secondary browser
 F7::
 if WinExist("ahk_exe chrome.exe")
     WinActivate
-else
-    Run chrome.exe
 return
 ; F8: Messenger
 ; F8::
@@ -226,10 +214,12 @@ return
 F10::
 if WinExist("ahk_exe Slack.exe")
     WinActivate
-else
-    Run, "C:\Program Files\Slack\Slack.exe"
-    return
+return
 ; F11
+F11::
+if WinExist("ahk_exe thunderbird.exe")
+    WinActivate
+return
 ; F12
 F12::
 if WinExist("ahk_exe Postman.exe")
