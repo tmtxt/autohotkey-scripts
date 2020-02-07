@@ -168,7 +168,7 @@ return
 ; Fast application switching
 ; F1: Browser
 F1::
-if WinExist("ahk_exe firefox.exe")
+if WinExist("ahk_exe firefox.exe",,"Picture-in-Picture")
     WinActivate
 return
 ; F2: Emacs
