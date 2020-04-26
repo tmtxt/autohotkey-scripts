@@ -154,7 +154,7 @@ return
 ; Mac style:
 
 ; Quit app
-<#q::
+#q::
 Send !{F4}
 return
 
@@ -168,7 +168,7 @@ return
 ; Fast application switching
 ; F1: Browser
 F1::
-if WinExist("ahk_exe firefox.exe",,"Picture-in-Picture")
+if WinExist("ahk_exe chrome.exe",,"Picture-in-Picture")
     WinActivate
 return
 ; F2: Emacs
@@ -202,14 +202,12 @@ if WinExist("ahk_exe chrome.exe")
     WinActivate
 return
 ; F8: Messenger
-; F8::
-; if WinExist("Messenger")
-;   WinActivate
-; else
-;   ; NOTE: Change this depending on the machine
-;   Run, "C:\Program Files (x86)\Google\Chrome\Application\chrome_proxy.exe" "--profile-directory=Default" "--app-id=necdkaglbmnhgapjfamakhengnbknpdn"
-; return
-; F9
+F8::
+if WinExist("ahk_exe Messenger.exe")
+    WinActivate
+return
+; F9 RDP
+
 ; F10: Slack
 F10::
 if WinExist("ahk_exe Slack.exe")
