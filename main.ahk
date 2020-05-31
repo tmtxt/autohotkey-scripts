@@ -198,7 +198,7 @@ if WinExist("ahk_class iTunes")
 return
 ; F7: Secondary browser
 F7::
-if WinExist("ahk_exe chrome.exe")
+if WinExist("ahk_exe firefox.exe")
     WinActivate
 return
 ; F8: Messenger
@@ -270,6 +270,14 @@ Send ^4
 return
 #5::
 Send ^5
+return
+#IfWinActive
+
+; --------------------
+; Messenger keys
+#IfWinActive, ahk_exe Messenger.exe
+#k::
+Send ^k
 return
 #IfWinActive
 
