@@ -168,7 +168,7 @@ return
 ; Fast application switching
 ; F1: Browser
 F1::
-if WinExist("ahk_exe chrome.exe",,"Picture-in-Picture")
+if WinExist("ahk_exe firefox.exe",,"Picture-in-Picture")
     WinActivate
 return
 ; F2: Emacs
@@ -198,7 +198,7 @@ if WinExist("ahk_class iTunes")
 return
 ; F7: Secondary browser
 F7::
-if WinExist("ahk_exe firefox.exe")
+if WinExist("ahk_exe chrome.exe",,"Picture-in-Picture")
     WinActivate
 return
 ; F8: Messenger
@@ -206,8 +206,11 @@ F8::
 if WinExist("ahk_exe Messenger.exe")
     WinActivate
 return
-; F9 RDP
-
+; F9 Notion
+F9::
+if WinExist("ahk_exe Notion.exe")
+    WinActivate
+return
 ; F10: Slack
 F10::
 if WinExist("ahk_exe Slack.exe")
@@ -215,7 +218,7 @@ if WinExist("ahk_exe Slack.exe")
 return
 ; F11
 F11::
-if WinExist("ahk_exe thunderbird.exe")
+if WinExist("ahk_exe MailClient.exe")
     WinActivate
 return
 ; F12
