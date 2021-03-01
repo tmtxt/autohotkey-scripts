@@ -218,7 +218,7 @@ if WinExist("ahk_exe Slack.exe")
 return
 ; F11
 F11::
-if WinExist("ahk_exe MailClient.exe")
+if WinExist("ahk_exe ClickUp.exe")
     WinActivate
 return
 ; F12
